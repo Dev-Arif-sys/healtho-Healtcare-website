@@ -1,6 +1,6 @@
 # HEALTHO -the ultimate medical care center
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+to visit the site [click here](https://healtho.netlify.app/).
 
 ## feature of the site
  * made with react including react router .
