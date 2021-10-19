@@ -1,0 +1,32 @@
+[
+    {
+      "name": "Dr. HANI B BARADI",
+      "image": "https://thumbs.dreamstime.com/b/smiling-female-doctor-holding-medical-records-lab-coat-her-office-clipboard-looking-camera-56673035.jpg",
+      "departmnent": "Cardiologist"
+    },
+    {
+      "name": "Dr. NAJJIA N MAHMOUD",
+      "image": "https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+      "departmnent": "Gynicologist"
+    },
+    {
+      "name": "Dr. SANKAR NAIDU ADUSUMILLI",
+      "image": "https://t4.ftcdn.net/jpg/02/60/04/09/360_F_260040900_oO6YW1sHTnKxby4GcjCvtypUCWjnQRg5.jpg",
+      "departmnent": "Hematologist"
+    },
+    {
+      "name": "Dr. LANCE KYLE BURNS",
+      "image": "https://img.freepik.com/free-photo/pleased-young-female-doctor-wearing-medical-robe-stethoscope-around-neck-standing-with-closed-posture_409827-254.jpg?size=626&ext=jpg",
+      "departmnent": "Dentist"
+    },
+    {
+      "name": "\tDr. VIKRAM B REDDY",
+      "image": "https://post.healthline.com/wp-content/uploads/2019/01/Male_Doctor_732x549-thumbnail.jpg",
+      "departmnent": "Nephrologist"
+    },
+    {
+      "name": "\tDr. RImi SHARMA",
+      "image": "https://images.hindustantimes.com/img/2021/09/22/550x309/IMG_9913_1632286931489_1632286943407.jpg",
+      "departmnent": "Pediatrist"
+    }
+  ]

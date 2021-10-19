@@ -1,0 +1,18 @@
+.qoute{
+    
+    background:linear-gradient(0deg, rgba(7, 1, 5, 0.3), rgba(14, 2, 9, 0.3)), url('../../../media/banner/slider1.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.qoute div{
+    text-align: center;
+    width: 850px;
+    margin: 0 auto;
+    max-width: 90%;
+    color: white;
+    padding: 80px 0;
+}
+.qoute h1{
+    font-size: 3rem;
+}

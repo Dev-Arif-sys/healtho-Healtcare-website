@@ -1,0 +1,77 @@
+.form-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.form-img{
+    background-color: rgb(206, 205, 199);
+    text-align: center;
+    
+}
+.form-img img{
+     width: 80%;
+    max-width:350px ;
+    height: auto;
+    margin-top: 10px;
+    padding: 20px;
+}
+.signin-form{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.signin-form .input{
+    border: none;
+    border-bottom: 1px solid lightgray ;
+    outline: none;
+    margin-bottom: .8em;
+    width: 350px;
+    padding: 10px;
+    
+   
+}
+.signin-button{
+    border: none;
+    text-align: center;
+    display: inline-block;
+  padding: .5em .8em;
+  background-color: rgb(206, 205, 199);;
+  border-radius: 20px;
+ letter-spacing: 4px;
+}
+.google-sign{
+    border: none;
+    background-color: transparent;
+}
+.google-sign img{
+    width: 30px;
+}
+
+.google-sign:hover img{
+    
+    animation: rotateArrow .2s  linear;
+}
+@keyframes rotateArrow {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@media only screen and (max-width:688px) {
+     .form-container{
+         grid-template-columns: repeat(1,1fr);
+     }
+     .signin-form .input{
+          width: 90%;
+     }
+}

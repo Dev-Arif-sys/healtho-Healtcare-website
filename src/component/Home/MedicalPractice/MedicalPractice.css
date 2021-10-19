@@ -1,0 +1,16 @@
+
+.practice-card{
+   
+    max-width: 350px;
+    text-align: center;
+    background-color: rgb(250, 248, 242);
+    padding: 20px;
+    margin: 5px;
+    
+     
+}
+.practice-card h4{
+    color: darkblue;
+    font-size: 2rem;
+    margin-bottom: 1em;
+}

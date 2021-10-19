@@ -1,0 +1,13 @@
+.main-title{
+    background:linear-gradient(0deg, rgba(39, 12, 28, 0.7), rgba(71, 10, 46, 0.7)), url(../../../media/banner/banner.jpg);
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px;
+    color: white;
+}
+.heading-img img{
+    width: 100%;
+    height: 350px;
+}

@@ -1,0 +1,43 @@
+
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(51, 5, 94) ;
+}
+.logo-portion{
+    color: rgb(91, 170, 12);
+}
+.navbar .nav-menu{
+    color:rgb(51, 5, 94)!important ;
+    border-bottom: 1px solid #F8F9FA ;
+}
+.navbar .nav-menu:hover{
+    color:rgb(51, 5, 94)!important ;
+    border-bottom: 1px solid rgb(91, 170, 12) ;
+}
+.navbar .nav-menu:focus{
+    color:rgb(51, 5, 94)!important ;
+    border-bottom: 2px solid rgb(51, 5, 94) ;
+}
+
+.sign-btn{
+    border: none;
+    padding: .4em .7em;
+    background-color:rgb(51, 5, 94);
+    color: white;
+    border-radius: 5px;
+}
+.signout-btn{
+    border: none;
+    padding: .4em .7em;
+    background-color:#61CE70;
+    color: white;
+    border-radius: 5px;
+}
+.navbar button{
+    transition: .2s transform;
+}
+.navbar button:hover{
+   transform: scale(.9);
+}
