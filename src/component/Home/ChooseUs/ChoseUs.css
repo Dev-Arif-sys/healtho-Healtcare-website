@@ -1,0 +1,27 @@
+.choose-point{
+    background-color: cyan;
+    padding: 2em 1em;
+    margin-bottom: 11px;
+    font-size: 1.7rem;
+    color: rgb(82, 7, 7);
+}
+.choose-title{
+    font-size: 3.4rem;
+    width: 60%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width:768px) {
+    .choose-title{
+        font-size: 1.4rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width:769px) and (min-width:998px) {
+    .choose-title{
+        font-size: 2.4rem;
+        width: 70%;
+        margin: 0 auto;
+    }
+}

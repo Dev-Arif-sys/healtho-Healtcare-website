@@ -4,6 +4,7 @@ import img from '../../media/undraw_enter_uhqk.svg'
 import { useForm } from 'react-hook-form';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 import googleLogo from '../../media/google-logo-png-29546.png'
+import githubLogo from '../../media/github-logo.png'
 import { Link } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
 import { useHistory, useLocation } from 'react-router';
@@ -54,7 +55,7 @@ const Signin = () => {
                      <br />
 
                      <button onClick={handleGithubSignin} className='google-sign'>
-                     sign in with Github</button>
+                     <img  src={githubLogo} alt="" /> sign in with Github</button>
 
                      <p>new user? <Link to='/register'>Create Account</Link></p>
             </div>
