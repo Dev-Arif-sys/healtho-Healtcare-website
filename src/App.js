@@ -3,7 +3,7 @@ import './App.css';
 import Header from './component/Header/Header';
 import Home from './component/Home/Home';
 import Footer from './component/Footer/Footer';
-import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import ServiceDetail from './component/Home/ServiceDetail/ServiceDetail';
 import ContextProvider from './ContextProvider/ContextProvider';
 import Signin from './component/Signin/Signin';
@@ -19,32 +19,26 @@ function App() {
       <ContextProvider>
       <Router>
       <Header></Header>
-      <Switch>
-       <Route exact path='/'>
-        <Home></Home>
-       </Route>
-       <Route  path='/home'>
-        <Home></Home>
-       </Route>
-       <PrivateRoute path='/service/:serviceId'>
-        <ServiceDetail></ServiceDetail>
-       </PrivateRoute>
-       <Route path='/signin'>
-        <Signin></Signin>
-       </Route>
-       <Route path='/register'>
-       <Register></Register>
-       </Route>
-       <PrivateRoute path='/about'>
-        <About></About>
-       </PrivateRoute>
-       <PrivateRoute path='/doctors'>
-         <Doctors></Doctors>
-       </PrivateRoute>
-       <Route path='*'>
-         <NotFound></NotFound>
-       </Route>
-      </Switch>
+      <Routes>
+       <Route  path='/' element={<Home/>}/>
+        
+       <Route  path='/home' element={<Home/>}/>
+
+       <Route  path='/service/:serviceId' element={<PrivateRoute><ServiceDetail/></PrivateRoute>}/>
+            
+       
+       <Route path='/signin' element={<Signin/>}/>
+        
+       <Route path='/register' element={<Register/>}/>
+       <Route  path='/about' element={<PrivateRoute><About/></PrivateRoute>}/>
+           
+
+          <Route  path='/doctors' element={<PrivateRoute><Doctors/></PrivateRoute>}/>
+           
+  
+        
+       <Route path='*' element={<NotFound/>}/>
+      </Routes>
       <Footer></Footer>
     </Router>
       </ContextProvider>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {useParams} from 'react-router-dom'
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 import useService from '../../Hooks/useService';
 import './ServiceDetail.css'
 
@@ -13,9 +13,9 @@ const ServiceDetail = () => {
    console.log(matchedService)
   
     const {name,image,description}=matchedService;
-     const history=useHistory()
+     const navigate=useNavigate()
     const handleAllServices=()=>{
-        history.push('/home') 
+        navigate('/home') 
     }
    
     return (

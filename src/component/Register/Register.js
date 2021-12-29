@@ -6,15 +6,15 @@ import { faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 import googleLogo from '../../media/google-logo-png-29546.png'
 import { Link } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 
 const Register= () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const {createUserWithEmail,signinWithGoogle}=useAuth();
 
-   const  history=useHistory()
+   const  navigate=useNavigate()
     const onSubmit = data => {
-        createUserWithEmail(data.name,data.email,data.password,history)
+        createUserWithEmail(data.name,data.email,data.password,navigate)
         console.log(data)}
     ;
     return (

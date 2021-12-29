@@ -18,14 +18,15 @@ const useFirebase = () => {
 
     //    google sign in method
 
-    const signinWithGoogle = (redirect_uri, history) => {
+    const signinWithGoogle = (redirect_uri, navigate) => {
         setLoading(true)
+        
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 const user = result.user
                 console.log(user)
                 setUser(user)
-                history.push(redirect_uri)
+                navigate(redirect_uri)
             })
             .catch(error => {
                 let errorMsg=(error.message);
@@ -35,14 +36,14 @@ const useFirebase = () => {
             })
     }
 
-    const signinWithGithub = (redirect_uri, history) => {
+    const signinWithGithub = (redirect_uri, navigate) => {
         setLoading(true)
         signInWithPopup(auth, githubProvider)
             .then(result => {
                 const user = result.user
                 console.log(user)
                 setUser(user)
-                history.push(redirect_uri)
+                navigate(redirect_uri)
             })
             .finally(()=>{
                 setLoading(false)
@@ -61,7 +62,7 @@ const useFirebase = () => {
 
     // create user with password and email
 
-    const createUserWithEmail = (name, email, password, history) => {
+    const createUserWithEmail = (name, email, password, navigate) => {
               setLoading(true)
         createUserWithEmailAndPassword(auth, email, password)
             .then(userCredential => {
@@ -70,7 +71,7 @@ const useFirebase = () => {
                 setName(name)
                 updateName(name)
                 setUser(user)
-                history.push('/signin')
+                navigate('/signin')
                 window.location.reload()
 
             })
@@ -86,14 +87,14 @@ const useFirebase = () => {
     }
 
 
-    const signinWithEmail = (email, password,redirect_uri,history) => {
+    const signinWithEmail = (email, password,redirect_uri,navigate) => {
            setLoading(true)
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 updateName(name)
                 const user = userCredential.user;
                 console.log(user)
-                history.push(redirect_uri)
+                navigate(redirect_uri)
             })
             .catch((error) => {
                 

@@ -7,27 +7,27 @@ import googleLogo from '../../media/google-logo-png-29546.png'
 import githubLogo from '../../media/github-logo.png'
 import { Link } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
-import { useHistory, useLocation } from 'react-router';
+import { useHistory, useLocation,useNavigate } from 'react-router';
 
 const Signin = () => {
     const {signinWithGoogle, errormsging,signinWithEmail,signinWithGithub}=useAuth()
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     const location=useLocation()
-    const history=useHistory()
+    const navigate=useNavigate()
     const redirect_uri=location.state?.from.pathname || '/home'
     console.log(redirect_uri)
 
     const onSubmit = data => {
-        signinWithEmail(data.email,data.password,redirect_uri)
+        signinWithEmail(data.email,data.password,redirect_uri,navigate)
     };
 
     const handleGoogleSignin=()=>{
-        signinWithGoogle(redirect_uri,history)
+        signinWithGoogle(redirect_uri,navigate)
     }
 
     const handleGithubSignin=()=>{
-      signinWithGithub(redirect_uri,history)
+      signinWithGithub(redirect_uri,navigate)
     }
     return (
         <div className="form-container  container" >

@@ -4,14 +4,14 @@ import useServices from '../../Hooks/getServices';
 import './Service.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons'
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 
 const Service = (props) => {
      const{name,id,image,description}=props.service
      const arrowIcon = <FontAwesomeIcon icon={faArrowAltCircleRight} />
-     const history=useHistory()
+     const navigate=useNavigate()
      const showDetail=()=>{
-       history.push(`/service/${id}`)
+       navigate(`/service/${id}`)
      }
     return (
         <Col>
